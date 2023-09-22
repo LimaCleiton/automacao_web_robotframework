@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.11.1 on win32)" generated="20230922 00:34:45.614" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="C:\automacao\web\tests">
+<kw name="Inicia setup" library="setups" type="SETUP">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<arg>acesso</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="acesso" library="setups">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230922 00:34:45.895" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230922 00:34:45.895" endtime="20230922 00:34:47.537"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230922 00:34:47.537" endtime="20230922 00:34:47.663"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230922 00:34:47.664" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<status status="PASS" starttime="20230922 00:34:47.663" endtime="20230922 00:34:48.219"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DIGIT_USERNAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230922 00:34:48.220" endtime="20230922 00:34:48.249"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${DIGIT_USERNAME}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230922 00:34:48.249" level="INFO">Typing text 'standard_user' into text field '//input[contains(@placeholder,'Username')]'.</msg>
+<status status="PASS" starttime="20230922 00:34:48.249" endtime="20230922 00:34:48.376"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DIGIT_PASSWORD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230922 00:34:48.376" endtime="20230922 00:34:48.411"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${DIGIT_PASSWORD}</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230922 00:34:48.412" level="INFO">Typing password into text field '//input[contains(@placeholder,'Password')]'.</msg>
+<msg timestamp="20230922 00:34:48.449" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230922 00:34:48.534" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230922 00:34:48.411" endtime="20230922 00:34:48.534"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CLICK_SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230922 00:34:48.534" level="INFO">Clicking element '//input[contains(@type,'submit')]'.</msg>
+<status status="PASS" starttime="20230922 00:34:48.534" endtime="20230922 00:34:48.648"/>
+</kw>
+<status status="PASS" starttime="20230922 00:34:45.895" endtime="20230922 00:34:48.649"/>
+</kw>
+<status status="PASS" starttime="20230922 00:34:45.895" endtime="20230922 00:34:48.649"/>
+</kw>
+<status status="PASS" starttime="20230922 00:34:45.895" endtime="20230922 00:34:48.649"/>
+</kw>
+<suite id="s1-s1" name="Swag Labs" source="C:\automacao\web\tests\Swag_Labs">
+<suite id="s1-s1-s1" name="Swag labs" source="C:\automacao\web\tests\Swag_Labs\Swag_labs.robot">
+<test id="s1-s1-s1-t1" name="TC01: Adicionar produto ao carrinho">
+<kw name="Dado que adiciono um produto ao carrinho" library="gherkin_ptbr" sourcename="Dado que ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="adiciono um produto ao carrinho" library="kws_cart">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ADD_TO_CART}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230922 00:34:48.721" endtime="20230922 00:34:48.751"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ADD_TO_CART}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230922 00:34:48.752" level="INFO">Clicking button '//button[contains(@data-test,'add-to-cart-sauce-labs-backpack')]'.</msg>
+<status status="PASS" starttime="20230922 00:34:48.751" endtime="20230922 00:34:48.834"/>
+</kw>
+<status status="PASS" starttime="20230922 00:34:48.721" endtime="20230922 00:34:48.834"/>
+</kw>
+<status status="PASS" starttime="20230922 00:34:48.720" endtime="20230922 00:34:48.834"/>
+</kw>
+<status status="PASS" starttime="20230922 00:34:48.719" endtime="20230922 00:34:48.834"/>
+</kw>
+<kw name="Quando clico no carrinho" library="gherkin_ptbr" sourcename="Quando ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="clico no carrinho" library="kws_cart">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CLICK_CART}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230922 00:34:48.836" endtime="20230922 00:34:48.860"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CLICK_CART}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230922 00:34:48.861" level="INFO">Clicking element '//a[@class='shopping_cart_link'][contains(.,'1')]'.</msg>
+<status status="PASS" starttime="20230922 00:34:48.861" endtime="20230922 00:34:48.942"/>
+</kw>
+<status status="PASS" starttime="20230922 00:34:48.835" endtime="20230922 00:34:48.942"/>
+</kw>
+<status status="PASS" starttime="20230922 00:34:48.835" endtime="20230922 00:34:48.942"/>
+</kw>
+<status status="PASS" starttime="20230922 00:34:48.835" endtime="20230922 00:34:48.942"/>
+</kw>
+<kw name="Então visualizo o produto &quot;Sauce Labs Backpack&quot; no carrinho com sucesso" library="gherkin_ptbr" sourcename="Então ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="visualizo o produto &quot;Sauce Labs Backpack&quot; no carrinho com sucesso" library="kws_shared" sourcename="visualizo o produto &quot;${EXPECTED_PRODUCT}&quot; no carrinho com sucesso">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class='inventory_item_name'][contains(.,'Sauce Labs Backpack')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230922 00:34:48.945" endtime="20230922 00:34:48.973"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${PRODUCT}</var>
+<arg>//div[@class='inventory_item_name'][contains(.,'Sauce Labs Backpack')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230922 00:34:49.001" level="INFO">${PRODUCT} = Sauce Labs Backpack</msg>
+<status status="PASS" starttime="20230922 00:34:48.974" endtime="20230922 00:34:49.001"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${EXPECTED_PRODUCT}</arg>
+<arg>${PRODUCT}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230922 00:34:49.001" endtime="20230922 00:34:49.001"/>
+</kw>
+<status status="PASS" starttime="20230922 00:34:48.945" endtime="20230922 00:34:49.001"/>
+</kw>
+<status status="PASS" starttime="20230922 00:34:48.944" endtime="20230922 00:34:49.001"/>
+</kw>
+<status status="PASS" starttime="20230922 00:34:48.944" endtime="20230922 00:34:49.001"/>
+</kw>
+<kw name="Quit Application" library="teardown" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230922 00:34:49.131" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230922 00:34:49.001" endtime="20230922 00:34:49.131"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230922 00:34:49.131" endtime="20230922 00:34:51.381"/>
+</kw>
+<status status="PASS" starttime="20230922 00:34:49.001" endtime="20230922 00:34:51.381"/>
+</kw>
+<tag>EP_Swag_labs</tag>
+<tag>Swag_labs</tag>
+<status status="PASS" starttime="20230922 00:34:48.718" endtime="20230922 00:34:51.381"/>
+</test>
+<status status="PASS" starttime="20230922 00:34:48.665" endtime="20230922 00:34:51.386"/>
+</suite>
+<status status="PASS" starttime="20230922 00:34:48.649" endtime="20230922 00:34:51.387"/>
+</suite>
+<status status="PASS" starttime="20230922 00:34:45.614" endtime="20230922 00:34:51.391"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">EP_Swag_labs</stat>
+<stat pass="1" fail="0" skip="0">Swag_labs</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Swag Labs">Tests.Swag Labs</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Swag labs">Tests.Swag Labs.Swag labs</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
